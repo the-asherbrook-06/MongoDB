@@ -1,6 +1,12 @@
 # MongoDB Tutorial
 This tutorial will help you to go through the basics of MongoDB using Mongosh (MongoDB Shell)
 
+> [!NOTE]   
+> This document is created using the help of the following websites and AI Models   
+> [w3schools](https://www.w3schools.com/mongodb/)   
+> [Google Gemini](gemini.google.com)   
+> [ChatGPT](chatgpt.com)
+
 ## Launching mongosh
 To launch the MongoSh from the terminal, us the following command
 ```console
