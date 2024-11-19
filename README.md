@@ -26,7 +26,7 @@ test>
 
 ## Viewing the CWD
 To view the current Database that you are working on, we can use the command
-```shell
+```console
 db
 ```
 ```txt
@@ -38,7 +38,7 @@ test>
 
 ## Viewing all DB in the server
 Th view all DBs in the server, we can use the command
-```shell
+```console
 show dbs
 ```
 ```txt
@@ -53,7 +53,7 @@ test>
 
 ## Viewing the Help list
 MongoSh provides a Help menu. To view the Help menu, we can use the command
-```shell
+```console
 help
 ```
 ```txt
@@ -94,7 +94,7 @@ test>
 
 ## Switching DB
 To change the CWD, we can use the following command
-```shell
+```console
 db DatabaseName
 ```
 ```txt
@@ -106,7 +106,7 @@ Company>
 
 ## Creating Collection
 To create a Collection, we can use the command
-```shell
+```console
 db.createCollection('CollectionName')
 ```
 ```txt
@@ -118,7 +118,7 @@ Company>
 
 ## Inserting Data into Collection
 To insert a Single Data into a Collection as a field, we can use the command
-```shell
+```console
 db.CollectionName.insertOne({'key': 'Value', 'key': 'value'})
 ```
 ```txt
@@ -132,7 +132,7 @@ Company>
 ```
 
 We can also insert Multiple Data into the Collection by using the command
-```shell
+```console
 db.CollectionName.insertMany({'key': 'Value', 'key': 'value'}, {'key': 'value', 'key': 'value'})
 ```
 ```txt
@@ -148,7 +148,7 @@ Company> db.employee.insertMany([{'FirstName': 'Sanji', 'LastName': 'Vinsmoke', 
 
 ## Fetching Data from Collection
 To view the data from the collection in the Database, we can use the following command
-```shell
+```console
 db.CollectionName.find()
 ```
 ```txt
@@ -167,7 +167,7 @@ Company>
 
 ## Fetching the First Data from the Collection
 Using `find()` will fetch the data, but to fetch only the first data entry from the Collection, we can use the following command
-```shell
+```console
 db.CollectionName.findOne()
 ```
 ```txt
@@ -184,7 +184,7 @@ Company>
 
 ## Finding Data using Filters
 The find Data from the Collection using a parameter, we can use the `find()` command along with parameters as following
-```shell
+```console
 db.CollectionName.find({'key': 'Value'})
 ```
 ```txt
@@ -217,7 +217,7 @@ Company>
 The `find()` command also allows projection to be allowed as a second parameter. Projection allows the user to control the fields to be returned using the command. Using `1` shows the Field and `0` hides the field. Not specifying the field will show the Field by default. 
 
 Inclusion Projection
-```shell
+```console
 db.CollectionName.find({}, {'key': 1, 'key': 1})
 ```
 ```txt
@@ -244,7 +244,7 @@ Company>
 ```
 
 Exclusion Projection
-```shell
+```console
 db.CollctionName.find({}, {'key': 0, 'key': 0})
 ```
 ```txt
@@ -277,7 +277,7 @@ Company>
 
 ## Using Filters and Projections together
 We can use Filters and Projection at the same time as `find()` provides the two parameters seperately
-```shell
+```console
 db.CollectionName.find({'key': 'Value', 'key': 'Value'}, {'key': 1/0, 'key': 1/0})
 ```
 ```txt
@@ -289,7 +289,7 @@ Company>
 
 ## Update a Field
 To Update a field that has a specific value, we can use the following using the `$set` operator using the `updateOne()` command
-```shell
+```console
 db.CollectionName.updateOne({'key': 'Value'}, {$set: {'key': 'Value', 'key': 'Value'}})
 ```
 ```txt
@@ -308,7 +308,7 @@ Company>
 > The `updateOne()` command updates the record with the first match only and will not update all records
 
 To update multiple fields based on a query, we can use `updateMany()` command
-```shell
+```console
 db.CollectionName.updateMany({'key': 'Value'}, {$set: {'key': 'Value'}})
 ```
 ```txt
@@ -325,7 +325,7 @@ Company>
 ```
 
 To update all fields, we can leave the check parameter empty of the `updateMany()` command to match all fields in the collection
-```shell
+```console
 db.CollectionName.updateMany({}, {$set: {'key': 'Value'}})
 ```
 ```txt
@@ -343,7 +343,7 @@ Company>
 
 ## Upsert Modififier
 The `upsert` modifier allows the `updateOne()` or `updateMany()` command to update the values if found, else insert the values into the collection. This gives the users even more flexibility.
-```shell
+```console
 db.CollectionName.updateMany({'key': 'value'}, {$set: {'key': 'value'}}, {upsert: true})
 ```
 ```txt
