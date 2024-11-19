@@ -3,7 +3,7 @@ This tutorial will help you to go through the basics of MongoDB using Mongosh (M
 
 ## Launching mongosh
 To launch the MongoSh from the terminal, us the following command
-```
+```console
 mongosh
 ```
 ```txt
