@@ -270,9 +270,10 @@ Company> db.employee.find({}, {'Age': 0})
 Company>
 ```
 
-> Including `FirstName` and `LastName` or Excluding `Age` will provide the same output in this case as the Fields contain only three keys each
+> [!NOTE]
+>  Including `FirstName` and `LastName` or Excluding `Age` will provide the same output in this case as the Fields contain only three keys each
 
-> [!NOTE]  
+> [!WARNING]  
 > We will get an error if we try specifying `0` or `1` at the same time
 
 ## Using Filters and Projections together
@@ -282,7 +283,12 @@ db.CollectionName.find({'key': 'Value', 'key': 'Value'}, {'key': 1/0, 'key': 1/0
 ```
 ```txt
 Company> db.employee.find({'FirstName': 'Luffy'}, {'LastName': 1})
-[ { _id: ObjectId('673c58e23460c9e0a90d8192'), LastName: 'Monkey D' } ]
+[
+   {
+      _id: ObjectId('673c58e23460c9e0a90d8192'),
+      LastName: 'Monkey D'
+   }
+]
 
 Company>
 ```
