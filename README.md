@@ -3,7 +3,7 @@ This tutorial will help you to go through the basics of MongoDB using Mongosh (M
 
 ## Launching mongosh
 To launch the MongoSh from the terminal, us the following command
-```shell
+```
 mongosh
 ```
 ```txt
@@ -272,7 +272,7 @@ Company>
 
 > Including `FirstName` and `LastName` or Excluding `Age` will provide the same output in this case as the Fields contain only three keys each
 
-> !NOTE  
+> [!NOTE]  
 > We will get an error if we try specifying `0` or `1` at the same time
 
 ## Using Filters and Projections together
@@ -304,7 +304,7 @@ Company> db.employee.updateOne({'LastName': 'Vinsmoke'}, {$set: {'Age': 20}})
 
 Company>
 ```
-> !NOTE  
+> [!NOTE]  
 > The `updateOne()` command updates the record with the first match only and will not update all records
 
 To update multiple fields based on a query, we can use `updateMany()` command
