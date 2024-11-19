@@ -6,7 +6,7 @@ To launch the MongoSh from the terminal, us the following command
 ```console
 mongosh
 ```
-```txt
+```console
 PS C:\Users\Logics> mongosh
 Current Mongosh Log ID: 673c53363460c9e0a90d818f
 Connecting to:          mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.3.3
